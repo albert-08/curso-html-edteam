@@ -13,6 +13,15 @@
       border: 1px solid red;
       padding: .25em .5em;
     }
+
+    tfoot {
+      background: yellow;
+    }
+
+    thead {
+      color: red;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -56,6 +65,173 @@
       <td>Final</td>
       <td></td>
       <td></td>
+      <td>25</td>
+    </tr>
+  </table>
+
+  <!-- 
+    Estructura completa de una tabla
+
+    <table>
+      <caption></caption>
+      <th>
+        <td></td>
+        <td></td>
+      <th>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+        <tr>
+      </tbody>
+      <tfoot>
+        <td></td>
+        <td></td>
+      <tfoot>
+      </table>
+
+  -->
+
+  <h2>Mi horario de estudio</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HTML</td>
+        <td>CSS</td>
+        <td>Photoshop</td>
+        <td>JavaScript</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>PHP</td>
+        <td>CSS</td>
+        <td>HTML</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total de cursos</td>
+        <td></td>
+        <td></td>
+        <td>5</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Agrupar celdas 
+
+    Se usan los atributos
+    
+    colspan=n
+    rowspan=n
+
+    Donde n es la cantidad de columnas o filas que se van a combinar o agrupar.
+  -->
+
+  <h2>Agrupar celdas</h2>
+  <table>
+    <tr>
+      <td></td>
+      <td>Lunes</td>
+      <td>Martes</td>
+      <td>Miercoles</td>
+    </tr>
+    <tr>
+      <td>Ingresos</td>
+      <td>100</td>
+      <td>200</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Egresos</td>
+      <td>75</td>
+      <td>220</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Saldo</td>
+      <td>50</td>
+      <td>-20</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td colspan="3">Final</td>
+      <td>25</td>
+    </tr>
+  </table>
+
+  <h2>Agrupar celdas (2)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">HTML</td>
+        <td colspan="2">CSS</td>
+        <td rowspan="2">JavaScript</td>
+      </tr>
+      <tr>
+        <td>PHP</td>
+        <td>Photoshop</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total de cursos</td>
+        <td>5</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- colgroup -->
+   <h2>Colgroup</h2>
+  <table>
+    <colgroup>
+      <col span="3">
+      <col style="background: yellow;">
+    </colgroup>
+    <tr>
+      <td></td>
+      <td>Lunes</td>
+      <td>Martes</td>
+      <td>Miercoles</td>
+    </tr>
+    <tr>
+      <td>Ingresos</td>
+      <td>100</td>
+      <td>200</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Egresos</td>
+      <td>75</td>
+      <td>220</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Saldo</td>
+      <td>50</td>
+      <td>-20</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td colspan="3">Final</td>
       <td>25</td>
     </tr>
   </table>
