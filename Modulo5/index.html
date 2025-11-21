@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 5 - Contenido embebido</title>
+</head>
+<body>
+  <h1>Hola EDteam</h1>
+  <!-- 
+    Existen dos tipos de imágenes
+
+    1. Vectoriales. Son matemáticos (se crean con fórmulas) y no tienen resolución, es decir, no se pixelean en ningún nivel de zoom.
+    2. De mapa de bits. Son muchos cuadrados de colores (pixeles) que juntos forman una imagen. A más pixeles más calidad de la imagen. A cierto nivel de zoom se pixelean (se ven los pixeles).
+  -->
+
+  <!-- 
+    Formatos de imágenes
+
+      svg -> vectorial
+
+      jpg, jpeg -> para fotografías
+
+      png -> para transparencias o colores planos
+
+      gif -> son para animaciones o videos cortos (menos de 10 segundos)
+
+      webp -> combinan lo mejor de jpg y png con menos peso.
+
+      avif -> tiene mejor compresión que webp
+
+      heif -> el formato de Apple para fotografías, no es recomendable para web
+
+      En HTML las imagenes se insertan con la etiqueta <img src="">
+  -->
+
+  <img src="https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-laptop-picture-desktop.webp" alt="Imagen con algunos cursos de EDteam" width="700px">
+
+  <!-- picture -->
+
+  <picture>
+    <source srcset="https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-laptop-picture-desktop.webp">
+    <source srcset="https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/gallery-ia-picture-desktop.webp">
+    <source srcset="https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-cta-picture-desktop.webp">
+  </picture>
+
+  <!-- figure -->
+
+  <figure>
+    <img src="https://edteam-media.s3.amazonaws.com/campaigns/blackfriday/campaign-gallery-cta-picture-desktop.webp" alt="" width="200">
+    <figcaption>Imagen de una laptop</figcaption>
+  </figure>
+
+  <!-- audio y video -->
+
+  <video src="" width="500px" controls poster=""></video>
+
+  <audio src="" controls></audio>
+
+  <!-- Embeber contenido -->
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SOZVMG377no?si=B-FeXH_oidwIIhUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
