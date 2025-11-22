@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+  <style>
+    div {
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formularios</h1>
+
+  <!-- Estructura básica de un formulario -->
+
+  <!-- 
+    <form action="./recibido.html">
+      <div>
+        <input placeholder="Usuario">
+      </div>
+      <div>
+        <input placeholder="Contraseña">
+      </div>
+      <button>Ingresar</button>
+    </form> 
+  -->
+
+  <form action="./recibido.html">
+    <fieldset>
+      <legend>Tus datos</legend>
+      <div>
+        <label for="username">Usuario</label>
+        <input placeholder="Usuario" id="username" value="Alberto">
+      </div>
+      <div>
+        <label>
+          Contraseña
+          <input placeholder="Contraseña">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tus gustos</legend>
+      <div>
+        <label for="music">Música favorita</label>
+        <input placeholder="Música favorita" id="music" value="Crossover">
+      </div>
+      <div>
+        <label>
+          Plato favorito
+          <input placeholder="Plato favorito">
+        </label>
+      </div>
+    </fieldset>
+    <!-- 2 modos de enviar un formulario:
+        1. Button
+        2. <input type="submit"> 
+    -->
+    <!-- <button>Ingresar</button> -->
+     <input type="submit" value="Ingresar">
+  </form>
+
+  <form action="./recibido.html">
+    <label>
+      Text
+      <input type="text">
+    </label>
+    <label for="">
+      Number
+      <input type="number" name="" id="">
+    </label>
+    <label for="">
+      Date
+      <input type="date" name="" id="">
+    </label>
+    <label for="">
+      Email
+      <input type="email" name="" id="">
+    </label>
+    <label for="">
+      Tel
+      <input type="tel" name="" id="">
+    </label>
+    <label for="">
+      Color
+      <input type="color" name="" id="">
+    </label>
+    <label for="">
+      Password
+      <input type="password" name="" id="">
+    </label>
+    <label for="">
+      Range
+      <input type="range" name="" id="" min="10" max="20" step="2">
+    </label>
+    <input type="submit" value="Enviar datos">
+  </form>
+
+  <form action="./recibido.html" autocomplete="on">
+    <fieldset>
+      <legend>¿Qué quieres estudiar?</legend>
+      <label for="">
+        <input type="checkbox" name="cursos" id="" checked>
+        HTML
+      </label>
+      <label for="">
+        <input type="checkbox" name="cursos" id="">
+        CSS
+      </label>
+      <label for="">
+        <input type="checkbox" name="cursos" id="">
+        JavaScript
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Cuál es tu genero?</legend>
+      <label for="">
+        <input type="radio" name="genero" id="" required>
+        Hombre
+      </label>
+      <label for="">
+        <input type="radio" name="genero" id="">
+        Mujer
+      </label>
+    </fieldset>
+
+    <div>
+      <select name="pais" id="">
+        <optgroup label="Sudamérica">
+          <option value="peru">Perú</option>
+          <option value="colombia">Colombia</option>
+          <option value="bolivia">Bolivia</option>
+        </optgroup>
+        <optgroup label="Norteamérica">
+          <option value="mexico" selected>México</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <label for="comment">Deja tu comentario</label>
+    <textarea name="" id="comment" cols="20" rows="5"></textarea>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <!-- Atributos de formularios 
+    
+    "checked" para seleccionar un checkbox o radio por default.
+
+    "selected" igual que checked pero en un select.
+
+    "required"
+
+    "readonly"
+
+    "autocomplete"
+  
+  -->
+  
+</body>
+</html>
